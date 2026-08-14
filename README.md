@@ -66,31 +66,6 @@ No build step, node modules, or local server required!
 
 ---
 
-## 🌐 Deploying to GitHub Pages
-
-Publish your dashboard live on the web in 2 minutes:
-
-1. **Push your code to GitHub**:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit - Smart Plant Monitoring System"
-   git branch -M main
-   git remote add origin https://github.com/anand-00281/smart-plant-monitoring.git
-   git push -u origin main
-   ```
-
-2. **Enable GitHub Pages**:
-   - Go to your repository on **GitHub.com** (`anand-00281/smart-plant-monitoring`).
-   - Click **Settings** ➔ **Pages** (under *Code and automation*).
-   - Set **Source** to `Deploy from a branch`.
-   - Set **Branch** to `main` and folder to `/ (root)`.
-   - Click **Save**.
-
-3. 🎉 **Live URL**: `https://anand-00281.github.io/smart-plant-monitoring/`
-
----
-
 ## 📡 ThingSpeak Channel Setup
 
 To connect your own IoT sensor device (ESP32, ESP8266, Arduino):
@@ -102,15 +77,15 @@ To connect your own IoT sensor device (ESP32, ESP8266, Arduino):
    - **Field 4**: Light Level (LDR)
 2. Update the credentials in `script.js`:
    ```javascript
-   const channelID = "3059584"; // Your ThingSpeak Channel ID
-   const readAPIKey = "U7B35D7SL9DRASPL"; // Your Read API Key
+   const channelID = "YOUR_CHANNEL_ID"; // Your ThingSpeak Channel ID
+   const readAPIKey = "YOUR_READ_API_KEY"; // Your Read API Key
    ```
 
 ---
 
 ## 🔒 Security Notes
 
-- **Read API Key (`U7B35D7SL9DRASPL`)**: Safe for public repository exposure as it grants **read-only** telemetry access.
+- **Read API Key (`YOUR_READ_API_KEY`)**: Safe for public repository exposure as it grants **read-only** telemetry access.
 - **Write API Key**: **NEVER** expose your Write API key in frontend JS or GitHub code. Keep write credentials stored safely inside your microcontroller firmware.
 
 ---
