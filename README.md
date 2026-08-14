@@ -27,7 +27,7 @@ A modern, responsive, real-time web dashboard for monitoring plant environmental
 ## 📁 Repository Structure
 
 ```
-smart-home-dashboard/
+smart-plant-monitoring/
 ├── index.html     # Dashboard layout & Chart.js canvas containers
 ├── style.css      # Custom styling, Inter typography, glassmorphism, responsive grid
 ├── script.js      # Fetch API telemetry handler & dynamic Chart.js updating engine
@@ -54,8 +54,8 @@ No build step, node modules, or local server required!
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/smart-home-dashboard.git
-   cd smart-home-dashboard
+   git clone https://github.com/anand-00281/smart-plant-monitoring.git
+   cd smart-plant-monitoring
    ```
 2. **Launch the Dashboard**:
    - Simply double-click `index.html` to open it in your browser.
@@ -76,18 +76,18 @@ Publish your dashboard live on the web in 2 minutes:
    git add .
    git commit -m "Initial commit - Smart Plant Monitoring System"
    git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/smart-home-dashboard.git
+   git remote add origin https://github.com/anand-00281/smart-plant-monitoring.git
    git push -u origin main
    ```
 
 2. **Enable GitHub Pages**:
-   - Go to your repository on **GitHub.com**.
+   - Go to your repository on **GitHub.com** (`anand-00281/smart-plant-monitoring`).
    - Click **Settings** ➔ **Pages** (under *Code and automation*).
    - Set **Source** to `Deploy from a branch`.
    - Set **Branch** to `main` and folder to `/ (root)`.
    - Click **Save**.
 
-3. 🎉 **Live URL**: `https://YOUR-USERNAME.github.io/smart-home-dashboard/`
+3. 🎉 **Live URL**: `https://anand-00281.github.io/smart-plant-monitoring/`
 
 ---
 
