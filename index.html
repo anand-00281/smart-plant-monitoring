@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Real-time IoT based Smart Plant Monitoring System displaying temperature, humidity, soil moisture, and light levels with dynamic interactive graphs.">
+  <title>IoT Smart Plant Monitoring System</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Chart.js for smooth scrollbar-free native charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <main class="main-content">
+      <header class="dashboard-header center-header">
+        <div class="header-badge">
+          <span class="status-pulse"></span>
+          <span id="connection-status">Live Monitoring</span>
+        </div>
+        <h2>IoT Smart Plant Monitoring System</h2>
+        <p class="subtitle">Real-time telemetry and analytical visualization</p>
+      </header>
+
+      <section class="dashboard-cards" id="readings">
+        <div class="dashboard-card readings-card">
+          <div class="card-header">
+            <h3><span>🌿 <b>Latest Sensor Readings</b></span></h3>
+            <span class="last-updated" id="last-updated">Updating...</span>
+          </div>
+          
+          <div class="reading-row reading-row-flex">
+            <div class="reading-block">
+              <span class="reading-label">🌡️ Temperature</span>
+              <span id="temperature" class="reading-value loading">Loading...</span>
+            </div>
+            <div class="reading-block">
+              <span class="reading-label">💧 Humidity</span>
+              <span id="humidity" class="reading-value loading">Loading...</span>
+            </div>
+          </div>
+
+          <div class="reading-row reading-row-flex">
+            <div class="reading-block">
+              <span class="reading-label">🌱 Soil Moisture</span>
+              <span id="soil" class="reading-value loading">Loading...</span>
+            </div>
+            <div class="reading-block">
+              <span class="reading-label">💡 LDR (Light)</span>
+              <span id="ldr" class="reading-value loading">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-cards charts-section charts-grid" id="charts">
+        <div class="dashboard-card chart-card">
+          <h3>🌡️ Temperature History (°C)</h3>
+          <div class="chart-container">
+            <canvas id="tempChart"></canvas>
+          </div>
+        </div>
+
+        <div class="dashboard-card chart-card">
+          <h3>💧 Humidity History (%)</h3>
+          <div class="chart-container">
+            <canvas id="humChart"></canvas>
+          </div>
+        </div>
+
+        <div class="dashboard-card chart-card">
+          <h3>🌱 Soil Moisture History (%)</h3>
+          <div class="chart-container">
+            <canvas id="soilChart"></canvas>
+          </div>
+        </div>
+
+        <div class="dashboard-card chart-card">
+          <h3>💡 Light Level (LDR) History</h3>
+          <div class="chart-container">
+            <canvas id="ldrChart"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
